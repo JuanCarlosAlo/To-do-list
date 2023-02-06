@@ -1,0 +1,14 @@
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 540px
+}
+.card{
+    width: 100%;
+}
+.list__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightpink;
+}

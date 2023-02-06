@@ -1,1 +1,17 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 370px;
+    background-image: url(../assets/images/bg-desktop-light.jpg);
+    background-size: cover;
 
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 540px;
+    }
+}
