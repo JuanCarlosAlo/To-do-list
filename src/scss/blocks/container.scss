@@ -2,13 +2,41 @@
     margin-left: auto;
     margin-right: auto;
     width: 540px
+
 }
 .card{
     width: 100%;
 }
 .list__item{
-    display: flex;
+    display: none;
+    height: 60px;
     justify-content: space-between;
     align-items: center;
-    background-color: lightpink;
+    border: 2px solid lightpink;
+}
+.list__item--show{
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+
+.cross-icon{
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+}
+
+.text-line-through{
+    text-decoration:line-through;
+}
+
+.filter{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    border: 2px solid gray;
 }

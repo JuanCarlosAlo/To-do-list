@@ -21,16 +21,26 @@
       </header>
       <main class="main">
         <div class="container">
-          <div class="card">
-            <ul id="ul-lists" class="ul">
-              <li class="list__item">
-                <input type="checkbox" id="">
-                <label id="" for="input-id" >Complete js</label>
-                <img src="assets/images/icon-cross.svg" alt="">
-              </li>
-            </ul>
+          <div id="container" class="card">
+           
+          </div>
+          <div id="filter" class="filter">
+            <div class="filter__all">
+              <label for="all">All</label>
+              <input type="checkbox" id="all">
+            </div>
+            <div class="filter__done">
+              <label for="done">Done</label>
+              <input type="checkbox" id="done">
+            </div>
+            <div class="filter__undone">
+              <label for="undone">Undone</label>
+              <input type="checkbox" id="undone">
+            </div>
+            
           </div>
         </div>
+
       </main>
 
     <script type="module" src="./js/index.js"></script>
