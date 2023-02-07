@@ -1,0 +1,3 @@
+const arrayObj = []
+
+export {arrayObj}

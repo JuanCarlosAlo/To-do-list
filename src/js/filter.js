@@ -1,20 +1,28 @@
-import { container } from "../js/createCard.js";
+import { container, createCard } from "../js/createCard.js";
+import { arrayObj } from "../js/const.js";
 
-const filterList = (id) => {
-  for (let index = 0; index < container.children.length; index++) {
+const filteredArray = (array,key) =>
+arrayObj.filter(value => value.checked === key)
+
+const filterList = (id , checked) => {
+  container.innerHTML = ''
+  console.log(arrayObj)
+ 
+  
+
     if (id === "done") {
-      if (container.children[index].children[0].checked === false) {
-        container.children[index].classList.toggle("list__item--show");
-      }
+      const doneTasks = arrayObj.filter(task=>task.checked = true)
+      createCard(doneTasks)
     }
-    if (id === "undone") {
-      if (container.children[index].children[0].checked) {
-        container.children[index].classList.toggle("list__item--show");
-      }
+    if (id === "undone" && checked) {
+      const undoneTasks = arrayObj.filter(task=>task.checked = false)
+      createCard(doneTasks)
+      
     } else if (id === "all") {
-      container.children[index].classList.add("list__item");
+      const allTasks = arrayObj.filter(task=>task)
+  createCard(doneTasks)
     }
-  }
+  
 };
 
 export { filterList };
