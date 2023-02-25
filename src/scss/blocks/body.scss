@@ -1,7 +1,14 @@
 html {
 }
 body {
+    font-family: sans-serif;
  max-width: 1440px;
  margin-left: auto;
  margin-right: auto;
+ background-color: var(--white);
+}
+
+.body--dark{
+    --black:#fff;
+    --white:#000000;
 }

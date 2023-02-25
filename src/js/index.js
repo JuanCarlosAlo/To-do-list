@@ -2,6 +2,7 @@
 import "../scss/styles.scss";
 import { createCard, container, deleteTask, createObj } from "../js/createCard";
 import { filterList } from "../js/filter.js";
+import { darkModeOn } from "../js/darkMode.js";
 
 const formElement = document.getElementById("form");
 const formInput = document.getElementById("text-input");
@@ -10,6 +11,7 @@ const filter = document.getElementById("filter");
 const filterAll = document.getElementById("all");
 const filterUndone = document.getElementById("undone");
 const filterDone = document.getElementById("done");
+const darkMode = document.getElementById("dark-mode");
 
 formElement.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -32,4 +34,8 @@ filter.addEventListener("change", (e) => {
     filterDone.checked = false;
     filterList(e.target.id);
   }
+});
+
+darkMode.addEventListener("click", (e) => {
+  darkModeOn(darkMode);
 });

@@ -16,8 +16,7 @@ const createObj = (value) => {
 const createCard = (arrayObj) => {
   container.innerHTML = "";
   const fragment = document.createDocumentFragment();
-  arrayObj.forEach((task) => {
-    console.log(task);
+  arrayObj.forEach((task, index) => {
     const listItem = document.createElement("div");
     listItem.classList.add("list__item");
     listItem.classList.add("list__item--show");
@@ -25,6 +24,7 @@ const createCard = (arrayObj) => {
     const inputElement = document.createElement("input");
     inputElement.type = "checkbox";
     inputElement.id = task.id;
+    inputElement.checked = task.checked;
 
     const labelElement = document.createElement("label");
     labelElement.htmlFor = inputElement.id;
@@ -39,6 +39,7 @@ const createCard = (arrayObj) => {
       "click",
       (e) => {
         listItem.remove();
+        arrayObj.splice(index);
       },
       { once: true }
     );

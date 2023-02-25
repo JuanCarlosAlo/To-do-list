@@ -12,7 +12,8 @@
     height: 60px;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid lightpink;
+    color: var(--black);
+    border: 2px solid var(--black);
 }
 .list__item--show{
     display: flex;
@@ -38,5 +39,9 @@
     display: flex;
     justify-content: space-evenly;
     padding: 1rem;
-    border: 2px solid gray;
+    border-radius: 1rem;
+    color: var(--white);
+    background-color: gray;
+    border: 2px solid var(--black);
+    margin-bottom: 2rem;
 }
